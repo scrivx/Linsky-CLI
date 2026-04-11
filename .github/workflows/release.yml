@@ -39,15 +39,15 @@ jobs:
 
       - name: 🏗️ Build Windows
         run: |
-          GOOS=windows GOARCH=amd64 go build -ldflags "-s -w" -o releases/${{ github.ref_name }}/urlshortener-cli_windows_amd64.exe ./cmd
+          GOOS=windows GOARCH=amd64 go build -ldflags "-s -w" -o releases/${{ github.ref_name }}/linsky-cli_windows_amd64.exe ./cmd
 
       - name: 🏗️ Build Linux
         run: |
-          GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o releases/${{ github.ref_name }}/urlshortener-cli_linux_amd64 ./cmd
+          GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o releases/${{ github.ref_name }}/linsky-cli_linux_amd64 ./cmd
 
       - name: 🏗️ Build macOS
         run: |
-          GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w" -o releases/${{ github.ref_name }}/urlshortener-cli_darwin_amd64 ./cmd
+          GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w" -o releases/${{ github.ref_name }}/linsky-cli_darwin_amd64 ./cmd
 
       - name: 🚀 Create Release and upload assets
         uses: softprops/action-gh-release@v1
