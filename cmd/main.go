@@ -103,7 +103,7 @@ func main() {
                 continue
             }
             color.New(color.FgMagenta).Println("\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓")
-            color.New(color.FgMagenta).Println("┃                   URLs registradas                      ┃")
+            color.New(color.FgMagenta).Println("┃                   URLs registradas                         ┃")
             color.New(color.FgMagenta).Println("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛")
             fmt.Printf("  %-20s %-8s %s\n", "ALIAS", "CLICKS", "URL ORIGINAL")
             fmt.Println("  " + strings.Repeat("-", 70))
@@ -147,7 +147,6 @@ func printHelp() {
     hiBlue  := color.New(color.FgHiBlue)
     yellow  := color.New(color.FgYellow)
     gray    := color.New(color.FgHiBlack)
-    green   := color.New(color.FgHiGreen)
 
     hiRed.Println(`
         ██╗     ██╗███╗   ██╗███████╗██╗  ██╗██╗   ██╗
@@ -171,7 +170,6 @@ func printHelp() {
     printCmd(yellow, hiBlue, gray,
         "resolve", "<alias>    ",
         "Obtener la URL original")
-    green.Println("                                               [+1 click]")
 
     printCmd(yellow, hiBlue, gray,
         "list", "           ",
